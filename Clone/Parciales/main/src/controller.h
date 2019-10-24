@@ -33,7 +33,6 @@ int porcentajePedidosCompletados(eClientes list[], int len, ePedidos list2[], in
 
 int localidad_pendientes(eClientes list[], int len, ePedidos list2[], int len2);
 
-int cliente_PPPromedio(eClientes list[], int len, ePedidos list2[], int len2);
 
 int cuitTipoDePlasticoReciclado(eClientes list[], int len, ePedidos list2[], int len2);
 #endif /* CONTROLLER_H_ */

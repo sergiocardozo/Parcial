@@ -118,7 +118,7 @@ int pedidos_procesar(ePedidos array[], int size)
     	utn_getUnsignedInt("\nID de pedido: ","\nError",1,sizeof(int),1,size,3,&id);
     	if(pedidos_buscarID(array,size,id,&posicion)==-1)
     	{
-    		printf("No existe el ID del pedido");
+    		printf("\nNo existe el ID del pedido");
     	}
     	else
     	{

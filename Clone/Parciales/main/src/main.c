@@ -24,7 +24,7 @@ int main()
 	int contadorClientes=0;
 	int contadorPedidos;
 	int opcion;
-	int opcionInformes = 's';
+	char opcionInformes = 's';
 	char menuPrincipalMensaje[] ="\n1-MENU DE OPCIONES\
             \n\n1-ALTAS CLIENTES\
             \n2-MODIFICAR DATOS DE CLIENTE\
@@ -109,9 +109,7 @@ int main()
 		case 9:
 			printf("\nINFORMES");
 
-			do
-				{
-					utn_getChar("\n\na. Cliente con mas pedidos pendientes.\
+			utn_getChar("\n\na. Cliente con mas pedidos pendientes.\
 							\nb.Cliente con mas pedidos procesados.\
 							\nc.Cliente con mas pedidos\
 							\nd.Cliente que mas kilos reciclo\
@@ -120,9 +118,9 @@ int main()
 							\ng.Cantidad de clientes que reciclaron menos de 100 kg\
 							\nh.Pedidos completados: ID, CUIT, % de plastico reciclado\
 							\ni.Cantidad de pedidos pendientes por localidad\
-							\nj.Cantidad de PP reciclado promedio por cliente\
-							\nk.Cantidad de kilos reciclado de cada tipo de residuo por cliente\
-							\nS. SALIR","\nOpcion invalida",'a','z',2,&opcionInformes);
+							\nj.Cantidad de PP reciclado promedio por cliente SIN RESOLVER\
+							\nk.Cantidad de kilos reciclado de cada tipo de residuo por cliente\n\
+							\n Ingrese una opcion: ","\nOpcion invalida",'a','k',2,&opcionInformes);
 
 					switch(opcionInformes)
 					{
@@ -154,7 +152,7 @@ int main()
 						localidad_pendientes(arrayClientes,QTY_CLIENTES,arrayPedidos,QTY_PEDIDOS);
 						break;
 					case 'j':
-						cliente_PPPromedio(arrayClientes,QTY_CLIENTES,arrayPedidos,QTY_PEDIDOS);
+						//cliente_PPPromedio(arrayClientes,QTY_CLIENTES,arrayPedidos,QTY_PEDIDOS);
 						break;
 					case 'k':
 						cliente_listar(arrayClientes,QTY_CLIENTES);
@@ -163,7 +161,7 @@ int main()
 					default:
 						printf("\nOpcion incorrecta");
 					}
-				}while(opcionInformes == 's');
+
 			break;
 		case 10:
 			break;
